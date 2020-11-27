@@ -1,5 +1,6 @@
 package ua.edu.ucu.smartarr;
 
+
 abstract class SmartArrayDecorator implements SmartArray {
 
     protected SmartArray smartArray;
@@ -8,4 +9,7 @@ abstract class SmartArrayDecorator implements SmartArray {
         this.smartArray = smartArray;
     }
 
+    public void setSmartArray(SmartArray smartArray) {
+        this.smartArray = smartArray;
+    }
 }
