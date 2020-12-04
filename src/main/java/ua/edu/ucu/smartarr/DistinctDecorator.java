@@ -15,10 +15,11 @@ public class DistinctDecorator extends SmartArrayDecorator {
 
         for (int i = size - 1; i >= 0; --i) {
             for (int j = i - 1; j >= 0; --j) {
-                if (currArray[i].equals(currArray[j])) {
+                if (currArray[i].toString().equals(currArray[j].toString())) {
                     itemsToRemove[k] = i;
                     ++k;
                     break;
+                } else {
                 }
             }
         }
@@ -40,7 +41,7 @@ public class DistinctDecorator extends SmartArrayDecorator {
     }
 
     public String toString() {
-        return this.smartArray.toString();
+        return smartArray.toString();
     }
 
     @Override
@@ -55,6 +56,6 @@ public class DistinctDecorator extends SmartArrayDecorator {
 
     @Override
     public int size() {
-        return 0;
+        return smartArray.size();
     }
 }

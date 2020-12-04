@@ -17,7 +17,7 @@ public class SortDecorator extends SmartArrayDecorator {
     }
 
     public String toString() {
-        return this.smartArray.toString();
+        return smartArray.toString();
     }
 
     @Override
@@ -27,11 +27,11 @@ public class SortDecorator extends SmartArrayDecorator {
 
     @Override
     public String operationDescription() {
-        return null;
+        return "Sorts elements using MyComparator";
     }
 
     @Override
     public int size() {
-        return 0;
+        return smartArray.size();
     }
 }

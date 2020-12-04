@@ -17,7 +17,7 @@ public class SmartArrayAppTest {
         assertArrayEquals(expectedRes, res);
     }
 
-//    @Test
+    @Test
     public void testFindDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname() {
         Student[] students = {
                 new Student("Ivar", "Grimstad", 3.9, 2),

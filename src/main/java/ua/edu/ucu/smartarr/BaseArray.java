@@ -1,28 +1,34 @@
 package ua.edu.ucu.smartarr;
 
-import java.util.Arrays;
-
 public class BaseArray implements SmartArray {
     private Object[] arr;
     private int size;
 
     public BaseArray(Object[] arr) {
-        this.arr = arr;
+        this.arr = new Object[arr.length];
+        System.arraycopy(arr, 0, this.arr, 0, arr.length);
         this.size = arr.length;
     }
 
     public String toString() {
-        return Arrays.toString(arr);
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < size; ++i) {
+
+            output.append((String) arr[i]);
+        }
+        return output.toString();
     }
 
     @Override
     public Object[] toArray() {
-        return arr;
+        Object[] newArr = new Object[arr.length];
+        System.arraycopy(arr, 0, newArr, 0, arr.length);
+        return newArr;
     }
 
     @Override
     public String operationDescription() {
-        return null;
+        return "BaseArray";
     }
 
     @Override
